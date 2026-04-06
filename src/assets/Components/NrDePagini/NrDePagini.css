@@ -1,0 +1,28 @@
+.parteaPaginare { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 16px; 
+    padding: 20px; 
+}
+
+.btnPaginaAnterior, .btnPaginaUrmator { 
+    padding: 8px 18px; 
+    border: none; 
+    border-radius: 8px; 
+    background: #e74c3c; 
+    color: white; 
+    cursor: pointer; 
+    font-size: 0.95rem; 
+}
+
+.btnPaginaAnterior:disabled, .btnPaginaUrmator:disabled { 
+    background: #ddd; 
+    color: #999; 
+    cursor: default; 
+}
+
+.textCuNrPagina { 
+    font-size: 0.95rem; 
+    color: #555; 
+}

@@ -1,0 +1,47 @@
+.navBar { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 14px 24px; 
+    background: #e74c3c; 
+    color: white; 
+}
+
+.denumireaAplicatiei { 
+    font-size: 1.4rem; 
+    font-weight: bold; 
+}
+
+.butoane { 
+    display: flex; 
+    gap: 10px; 
+}
+
+.buton { 
+    padding: 8px 16px; 
+    border: 2px solid transparent; 
+    border-radius: 8px; 
+    background: none; 
+    color: white; 
+    cursor: pointer; 
+    font-size: 0.95rem; 
+}
+
+.buton:hover { 
+    background: rgba(255,255,255,0.15); 
+}
+
+.buton.activ { 
+    border-color: white; 
+    background: rgba(255,255,255,0.2); 
+}
+
+.numarulDeFavorite { 
+    background: white; 
+    color: #e74c3c; 
+    border-radius: 50%; 
+    padding: 1px 7px; 
+    font-size: 0.8rem; 
+    margin-left: 6px; 
+    font-weight: bold; 
+}

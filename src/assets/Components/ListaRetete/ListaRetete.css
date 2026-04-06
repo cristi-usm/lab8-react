@@ -1,0 +1,31 @@
+.afiseazaRetete { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); 
+    gap: 20px; 
+    padding: 20px; 
+}
+.numarRetete { 
+    text-align: center; 
+    color: #666; 
+    padding: 10px; 
+}
+
+.loading, .eroare { 
+    text-align: center; 
+    padding: 40px; 
+    font-size: 1.1rem; 
+}
+
+.eroare { 
+    color: #e74c3c; 
+}
+
+.dacaEgolLista { 
+    text-align: center; 
+    padding: 60px 20px; 
+}
+
+.mesajAfisatLista { 
+    color: #888; 
+    font-size: 1.1rem; 
+}

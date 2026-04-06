@@ -1,0 +1,44 @@
+.parteaDeCautare { 
+    padding: 20px; 
+}
+
+.cautareFormular { 
+    display: flex; 
+    gap: 10px; 
+    flex-wrap: wrap; 
+    align-items: center; 
+}
+
+.selecteazaCategoria { 
+    padding: 10px; 
+    border-radius: 8px; 
+    border: 1px solid #ddd; 
+    font-size: 0.95rem; 
+}
+
+.grupInputuri { 
+    display: flex; 
+    gap: 8px; 
+    flex: 1; 
+}
+
+.textInput { 
+    flex: 1; 
+    padding: 10px; 
+    border-radius: 8px; 
+    border: 1px solid #ddd; 
+    font-size: 0.95rem; 
+}
+
+.cautaBtn { 
+    padding: 10px 20px; 
+    background: #e74c3c; 
+    color: #fff; 
+    border: none; 
+    border-radius: 8px; 
+    cursor: pointer; 
+}
+
+.cautaBtn:hover { 
+    background: #c0392b; 
+}

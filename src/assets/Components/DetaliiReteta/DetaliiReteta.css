@@ -1,0 +1,40 @@
+.detaliiReteta { 
+    max-width: 700px; 
+    margin: 0 auto; 
+    padding: 24px; 
+}
+
+.btnInapoi { 
+    margin-bottom: 16px; 
+    padding: 8px 16px; 
+    background: #eee; 
+    border: none; 
+    border-radius: 8px; 
+    cursor: pointer; 
+}
+
+.btnInapoi:hover { 
+    background: #ddd; 
+}
+
+.imagineMare { 
+    width: 100%; 
+    max-height: 350px; 
+    object-fit: cover; 
+    border-radius: 12px; 
+    margin: 16px 0; 
+}
+
+.btnFavorit { 
+    padding: 10px 20px; 
+    background: #e74c3c; 
+    color: white; 
+    border: none; 
+    border-radius: 8px; 
+    cursor: pointer; 
+    margin: 12px 0; 
+}
+
+.btnFavorit:hover { 
+    background: #c0392b; 
+}

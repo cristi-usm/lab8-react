@@ -1,0 +1,21 @@
+.paginaFavorite { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); 
+    gap: 20px; 
+    padding: 20px; 
+}
+.titluFavorite { 
+    text-align: center; 
+    padding: 16px; 
+    font-size: 1.3rem; 
+}
+
+.dacaEgolFavorite { 
+    text-align: center; 
+    padding: 60px 20px; 
+}
+
+.mesajAfisatFavorite { 
+    color: #888; 
+    font-size: 1.1rem; 
+}
