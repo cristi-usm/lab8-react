@@ -1,28 +1,29 @@
-import { useFetch } from "./hooks/useFetch";
+import { useMovieState } from "./components/Context/useMovie";
+import Dashboard from "./components/Dashboard/Dashboard";
+import Favorites from "./components/Favorites/Favorites";
+import Header from "./components/Header/Header";
+import Search from "./components/Search/Search";
 
 const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w500";
 
 const App = () => {
-  const { data, loading, error } = useFetch(
-    "https://api.themoviedb.org/3/movie/popular",
-  );
+  const state = useMovieState();
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>{error}</p>;
-
-  console.log(data);
+  const renderView = () => {
+    switch (state.view) {
+      case "Search":
+        return <Search />;
+      case "Dashboard":
+        return <Dashboard />;
+      case "Favorites":
+        return <Favorites />;
+    }
+  };
 
   return (
     <div>
-      {data?.results?.map((movie) => (
-        <>
-          <p key={movie.id}>{movie.title}</p>
-          <img
-            src={`${IMAGE_BASE_URL}${movie.poster_path}`}
-            style={{ width: "200px" }}
-          />
-        </>
-      ))}
+      <Header />
+      {renderView()}
     </div>
   );
 };

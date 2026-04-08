@@ -16,6 +16,7 @@ export const useFetch = (url) => {
   const [error, setErorr] = useState(null);
 
   useEffect(() => {
+    if (!url) return;
     const fetchData = async () => {
       try {
         setLoading(true);

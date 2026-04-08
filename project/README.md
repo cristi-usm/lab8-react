@@ -1,4 +1,5 @@
 Some notes:
+
 https://api.themoviedb.org/3/movie/popular - API endpoint
 /3 -> versiunea 3 API
 /movie -> categoria filme
