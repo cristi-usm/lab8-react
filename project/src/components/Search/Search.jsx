@@ -1,17 +1,16 @@
 import React, { useEffect, useState } from "react";
 import Button from "../Button/Button";
-import { useMovieDispatch } from "../Context/useMovie";
+import { useMovieDispatch, useMovieState } from "../Context/useMovie";
 import { useFetch } from "../../hooks/useFetch";
 import Card from "../Card/Card";
-
-const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w200";
+import MoviePreview from "../MoviePreview/MoviePreview";
+import styles from "./Search.module.css";
 
 const Search = () => {
   const [inputValue, setInputValue] = useState("");
   const dispatch = useMovieDispatch();
-
+  const { selectedMovie } = useMovieState();
   const [url, setUrl] = useState(null);
-
   const { data, loading, error } = useFetch(url);
 
   useEffect(() => {
@@ -25,18 +24,31 @@ const Search = () => {
     setUrl(`https://api.themoviedb.org/3/search/movie?query=${inputValue}`);
   };
 
+  useEffect(() => {
+    document.body.style.overflow = selectedMovie ? "hidden" : "auto";
+    return () => (document.body.style.overflow = "auto");
+  }, [selectedMovie]);
+
   return (
-    <div>
-      <input
-        value={inputValue}
-        onChange={(e) => setInputValue(e.target.value)}
-      />
-      <Button text="Search" onClick={handleSearch} />
-      {loading && <p>Loading...</p>}
-      {error && <p>{error}</p>}
-      {data?.results?.map((movie) => (
-        <Card movie={movie} key={movie.id} />
-      ))}
+    <div className={styles.container}>
+      <div className={styles.searchBar}>
+        <input
+          className={styles.input}
+          value={inputValue}
+          onChange={(e) => setInputValue(e.target.value)}
+          placeholder="Search movies..."
+        />
+        <Button text="Search" onClick={handleSearch} />
+      </div>
+
+      {loading && <p className={styles.loading}>Loading...</p>}
+      {error && <p className={styles.error}>{error}</p>}
+
+      <div className={styles.cardsGrid}>
+        {data?.results?.map((movie) => (
+          <Card movie={movie} key={movie.id} />
+        ))}
+      </div>
     </div>
   );
 };

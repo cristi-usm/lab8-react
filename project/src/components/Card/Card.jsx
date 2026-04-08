@@ -1,22 +1,25 @@
 import React from "react";
 import styles from "./Card.module.css";
-import { useMovieDispatch, useMovieState } from "../Context/useMovie";
+import { useFavorites } from "../../hooks/useFavorites";
+import Button from "../Button/Button";
+import { useMovieDispatch } from "../Context/useMovie";
 const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w200";
 const FALLBACK_IMAGE =
   "https://dummyimage.com/200x300/cccccc/000000&text=No+Image";
 
 const Card = ({ movie }) => {
+  const { isFavorite, addFavorite, removeFavorite } = useFavorites();
   const dispatch = useMovieDispatch();
-  const { favorites } = useMovieState();
-
-  const isFavorite = favorites.some((fav) => fav.id === movie.id);
 
   const toggleFavorite = () => {
-    dispatch({
-      type: isFavorite ? "REMOVE_FAVORITE" : "ADD_FAVORITE",
-      payload: { movie },
-    });
+    if (isFavorite(movie.id)) removeFavorite(movie.id);
+    else addFavorite(movie);
   };
+
+  const previewMovie = () => {
+    dispatch({ type: "SET_SELECTED_MOVIE", payload: { id: movie.id } });
+  };
+
   return (
     <div className={styles.card}>
       <div className={styles.imageWrapper}>
@@ -30,10 +33,11 @@ const Card = ({ movie }) => {
         />
 
         <button className={styles.heart} onClick={toggleFavorite}>
-          {isFavorite ? "❤️" : "🤍"}
+          {isFavorite(movie.id) ? "❤️" : "🤍"}
         </button>
       </div>
       <h3 className={styles.title}>{movie.title}</h3>
+      <Button text="Preview Movie" onClick={previewMovie} />
     </div>
   );
 };

@@ -28,12 +28,14 @@ export const reducer = (state, action) => {
     }
     case "ADD_FAVORITE": {
       const { movie } = action.payload;
+      if (!movie) return state;
       const updated = [...state.favorites, movie];
       localStorage.setItem("favorites", JSON.stringify(updated));
       return { ...state, favorites: updated };
     }
     case "REMOVE_FAVORITE": {
-      const { id } = action.payload.movie;
+      const { id } = action.payload;
+      if (!id) return state;
       const updated = state.favorites.filter((f) => f.id !== id);
       localStorage.setItem("favorites", JSON.stringify(updated));
       return { ...state, favorites: updated };
@@ -46,5 +48,7 @@ export const reducer = (state, action) => {
       const { view } = action.payload;
       return { ...state, view };
     }
+    default:
+      return state;
   }
 };

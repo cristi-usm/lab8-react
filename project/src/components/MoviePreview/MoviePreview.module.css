@@ -1,0 +1,100 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+  overflow-y: auto; /* permite scroll dacă card-ul e mai mare decât viewport-ul */
+}
+
+.preview {
+  background: #fff;
+  border-radius: 12px;
+  max-width: 900px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto; /* scroll doar în interiorul card-ului */
+}
+
+
+.backBtn {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: #eee;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.2s;
+}
+
+.backBtn:hover {
+  background: #ddd;
+}
+
+.card {
+  display: flex;
+  margin-top: 40px; /* ca sa nu suprapuna butonul */
+  flex-wrap: wrap;
+}
+
+.imageWrapper {
+  position: relative;
+  flex-shrink: 0;
+  margin-right: 20px;
+}
+
+.image {
+  width: 300px;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.heart {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255,255,255,0.8);
+  border: none;
+  border-radius: 50%;
+  padding: 8px;
+  cursor: pointer;
+  font-size: 22px;
+}
+
+.info {
+  flex: 1;
+  min-width: 250px;
+}
+
+.title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 28px;
+  color: #2c3e50;
+}
+
+.overview {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.meta {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 5px;
+}
