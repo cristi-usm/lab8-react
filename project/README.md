@@ -8,3 +8,6 @@ https://api.themoviedb.org/3/movie/popular - API endpoint
 https://image.tmdb.org/t/p/w500/abc.jpg - API endpoint
 /t/p -> tipul de resource(images)
 /w500 -> width 500px
+
+encodeURIComponent -> transforma toate caracterele intr-o reprezentare percent-encoded
+

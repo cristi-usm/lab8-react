@@ -6,6 +6,7 @@ export const initialState = {
   favorites: JSON.parse(localStorage.getItem("favorites")) || [],
   selectedMovie: null,
   view: "Dashboard",
+  genre: 0,
 };
 
 export const reducer = (state, action) => {
@@ -47,6 +48,10 @@ export const reducer = (state, action) => {
     case "SET_VIEW": {
       const { view } = action.payload;
       return { ...state, view };
+    }
+    case "SET_GENRE": {
+      const { genre } = action.payload;
+      return { ...state, genre };
     }
     default:
       return state;

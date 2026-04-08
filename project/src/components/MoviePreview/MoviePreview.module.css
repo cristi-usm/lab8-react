@@ -10,7 +10,7 @@
   align-items: center;
   z-index: 1000;
   padding: 20px;
-  overflow-y: auto; /* permite scroll dacă card-ul e mai mare decât viewport-ul */
+  overflow-y: auto;
 }
 
 .preview {
@@ -23,7 +23,7 @@
   padding: 20px;
   position: relative;
   max-height: 90vh;
-  overflow-y: auto; /* scroll doar în interiorul card-ului */
+  overflow-y: auto; 
 }
 
 
@@ -46,7 +46,7 @@
 
 .card {
   display: flex;
-  margin-top: 40px; /* ca sa nu suprapuna butonul */
+  margin-top: 40px; 
   flex-wrap: wrap;
 }
 

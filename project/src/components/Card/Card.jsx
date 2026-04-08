@@ -37,7 +37,9 @@ const Card = ({ movie }) => {
         </button>
       </div>
       <h3 className={styles.title}>{movie.title}</h3>
-      <Button text="Preview Movie" onClick={previewMovie} />
+      <div className="buttonWrapper">
+        <Button text="Preview Movie" onClick={previewMovie} />
+      </div>
     </div>
   );
 };
