@@ -1,0 +1,132 @@
+.movie-details {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  margin-bottom: 1rem;
+  color: #666;
+}
+
+.movie-header {
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.movie-header-content {
+  background: linear-gradient(to right, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 50%, transparent 100%);
+  padding: 2rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.detail-poster {
+  width: 300px;
+  border-radius: 8px;
+}
+
+.movie-header-info {
+  color: white;
+  padding-top: 2rem;
+}
+
+.movie-header-info h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.movie-stats {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.favorite-btn {
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background: white;
+}
+
+.favorite-btn.active {
+  background: #ff4757;
+  color: white;
+}
+
+.movie-content {
+  padding: 0 1rem;
+}
+
+.movie-genres {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.genre {
+  background: #e0e0e0;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.movie-overview {
+  margin-bottom: 2rem;
+}
+
+.movie-overview h2 {
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.movie-overview p {
+  line-height: 1.6;
+  color: #444;
+}
+
+.movie-cast h2 {
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.cast-list {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
+
+.cast-item {
+  flex: 0 0 120px;
+  text-align: center;
+}
+
+.cast-item img {
+  width: 120px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.actor-name {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.character {
+  color: #666;
+  font-size: 0.8rem;
+}
