@@ -1,0 +1,38 @@
+.wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    padding: 4rem;
+}
+
+.ball {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: conic-gradient(#e63e3e, #ff8c42, #e63e3e);
+    animation: spin 0.9s linear infinite;
+    position: relative;
+}
+
+.ball::after {
+    content: '';
+    position: absolute;
+    inset: 6px;
+    background: #0d0b1a;
+    border-radius: 50%;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.msg {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.45);
+    letter-spacing: 0.06em;
+}

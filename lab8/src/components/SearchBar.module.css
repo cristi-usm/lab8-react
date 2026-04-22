@@ -1,0 +1,93 @@
+.bar {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.searchWrap {
+    position: relative;
+    flex: 1;
+    min-width: 240px;
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    position: absolute;
+    left: 14px;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.35);
+    pointer-events: none;
+}
+
+.input {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: #fff;
+    font-family: 'Syne', sans-serif;
+    font-size: 0.95rem;
+    padding: 0.7rem 5rem 0.7rem 2.8rem;
+    outline: none;
+    transition: border-color 0.2s, background 0.2s;
+}
+
+.input::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.input:focus {
+    border-color: rgba(230, 62, 62, 0.5);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.searchBtn {
+    position: absolute;
+    right: 6px;
+    background: #e63e3e;
+    border: none;
+    border-radius: 7px;
+    color: #fff;
+    font-family: 'Syne', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    padding: 0.42rem 0.9rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.searchBtn:hover {
+    background: #c72c2c;
+}
+
+.select {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: #fff;
+    font-family: 'Syne', sans-serif;
+    font-size: 0.88rem;
+    padding: 0.72rem 1rem;
+    outline: none;
+    cursor: pointer;
+    min-width: 140px;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='rgba(255,255,255,0.4)' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    padding-right: 2rem;
+    transition: border-color 0.2s;
+}
+
+.select:focus {
+    border-color: rgba(230, 62, 62, 0.5);
+}
+
+.select option {
+    background: #1a1828;
+    color: #fff;
+}
