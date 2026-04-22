@@ -1,0 +1,119 @@
+.card {
+    position: relative;
+    background: rgba(22, 20, 36, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    padding: 1.2rem 1rem 1rem;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.25s cubic-bezier(.34, 1.56, .64, 1), box-shadow 0.25s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45), 0 0 0 1px var(--type-color, #888);
+}
+
+.typeBg {
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background: var(--type-color, #888);
+    opacity: 0.15;
+    filter: blur(20px);
+    pointer-events: none;
+}
+
+.number {
+    align-self: flex-start;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.imgWrap {
+    width: 110px;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.5));
+    transition: transform 0.3s;
+}
+
+.card:hover .img {
+    transform: scale(1.1) translateY(-4px);
+}
+
+.info {
+    width: 100%;
+    text-align: center;
+}
+
+.name {
+    font-family: 'Syne', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+    text-transform: capitalize;
+    margin: 0 0 0.5rem;
+    letter-spacing: 0.02em;
+}
+
+.types {
+    display: flex;
+    gap: 0.4rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.typeChip {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 0.22rem 0.65rem;
+    border-radius: 99px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.favBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    line-height: 1;
+    padding: 2px 4px;
+    transition: color 0.2s, transform 0.2s;
+    z-index: 2;
+}
+
+.favBtn:hover {
+    color: #e63e3e;
+    transform: scale(1.2);
+}
+
+.favBtn.favActive {
+    color: #e63e3e;
+    filter: drop-shadow(0 0 4px #e63e3e88);
+}
